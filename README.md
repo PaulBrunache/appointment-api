@@ -1,24 +1,8 @@
-# README
+# Simple Appointment API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This will be running on heroku url: 
 
-Things you may want to cover:
+Stack Used:
 
-* Ruby version
+* React, webpack, Rails API, pg
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
