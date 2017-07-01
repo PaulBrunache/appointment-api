@@ -9,7 +9,7 @@ const HelloWorld = ({ name, updateName }) => (
     <hr />
     <form >
       <label htmlFor="name">
-        Say hello to:
+        did you change
       </label>
       <input
         id="name"
