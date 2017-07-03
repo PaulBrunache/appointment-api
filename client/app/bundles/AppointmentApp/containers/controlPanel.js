@@ -115,41 +115,17 @@ const mapDispatchToProps = (dispatch) => {
 export default class ControlPanel extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            appointments: null
-        }
-    }
-
-    componentDidMount() {
-        axios.get('http://localhost:3000/api/v1/resource/appointments')
-        .then(response => {
-            console.log("response received", response)
-            return this.setState({ appointments: response.data});
-        }).catch( error =>{
-            console.log(" we got an error?", error)
-        })
     }
 
     render () {
-        let table;
         const {newApp,cancel,create} = this.props
         const inCreateMode = this.props.panelForm.active
-
-        if (this.state.appointments) {
-            console.log('appointments are', this.state.appointments);
-            table = appointmentTable(this.state.appointments);
-        } else {
-            table = <div className="loader"></div>;
-        }
 
         return (
             <div>
                 <div className="row">
                     {(inCreateMode) ? <ShowCreateForm create={create} cancel={cancel}/> : showNewButton(newApp)}
-                </div>
-                <div className="row">
-                    {table}
-                </div>   
+                </div> 
             </div> 
         )
     }

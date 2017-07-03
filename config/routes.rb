@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       namespace :resource do
         get '/appointments',to: 'appointments#all'
         post '/appointments/new', to: 'appointments#create'
+        post '/appointments/query', to: 'appointments#query'
       end
     end
   end

@@ -4,4 +4,4 @@ import controlPanelCreateFormReducer from './controlPanelForm'
 import controlPanelSearchReducer from './controlPanelSearch'
 
 
-export default combineReducers({controlPanelCreateFormReducer})
+export default combineReducers({controlPanelCreateFormReducer,controlPanelSearchReducer})

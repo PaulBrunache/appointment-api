@@ -16,8 +16,13 @@ class Api::V1::Resource::AppointmentsController < ApplicationController
         end
     end
 
-    def destroy
-
+    def query
+        if params.has_key?(:query)
+             @query= Appointment.where("description LIKE ?" , "%#{farming}%" )
+             render :json => @query.as_json
+        else
+            render :json => { :errors => "Something went wrong" }
+        end
     end
     def all
         puts "in all action\n #{params}"

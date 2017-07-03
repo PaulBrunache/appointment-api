@@ -31,3 +31,11 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+#custom-panel{
+  margin: auto;
+  width: 65%; 
+  padding: 5%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}

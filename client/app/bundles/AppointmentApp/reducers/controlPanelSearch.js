@@ -1,22 +1,21 @@
 const initState = {
-  fetching: false
+  querying: false
 }
 
 const reducer = (state = initState, action) => {
   switch (action.type) {
-    case 'Nodd': 
+    case 'APPOINTMENT_QUERY': 
       state = {
         ...state,
-        fetching: true
+        querying: true
       } 
     break;
-    case 'NO': 
+    case 'APPOINTMENT_QUERY_STOP': 
       state = {
         ...state,
-        fetching: false
+        querying: false
       } 
-    break;
-    
+    break; 
   }
   return state;
 }
