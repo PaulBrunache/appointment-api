@@ -2,29 +2,44 @@ import React, { PropTypes } from 'react'
 
 const createAppointments = (list)=>{
 
-    return list.map((appointment)=>{
+    console.log('this is the list', list)
+    let x = list.map((appointment)=>{
         return(
-            <tr>
+            <tr key={appointment.id}>
                 <td>{appointment.date}</td>
                 <td>{appointment.time}</td>
                 <td>{appointment.description}</td>
             </tr>   
         ) 
-    });
+    })
 
+    return x;
 }
 
 const appointmentTable = appointmentList => {
-    let listIsEmpty = true
-    if (appointmentList){
-        listIsEmpty = false
+    console.log('my appointment list in dummy appointmenttable',appointmentList )
+    let listIsEmpty = false
+    if ( appointmentList.length < 0){
+        listIsEmpty = true
     }
     return (
         <div>
-            <div className="alert alert-info">
-                <strong>hmmm!</strong> Looks like there's no appointments to display.
-            </div>
-            <table className='table table-condensed table-bordered'>
+            { (listIsEmpty) ? nothingToShow(): generateTable(appointmentList) }
+        </div>
+    )
+}
+
+
+const nothingToShow = ()=> {
+    return(
+        <div className="alert alert-info">
+            <strong>hmmm!</strong> Looks like there's no appointments to display.
+        </div>
+    )
+}
+const generateTable=(appointments)=>{
+    return(
+        <table className='table table-condensed table-bordered'>
                 <thead>
                     <tr>
                         <th>Date</th>
@@ -34,11 +49,9 @@ const appointmentTable = appointmentList => {
                 </thead>
                 
                 <tbody>
-    
+                    {createAppointments(appointments)}
                 </tbody>
             </table>
-        </div>
     )
 }
-
 export default appointmentTable

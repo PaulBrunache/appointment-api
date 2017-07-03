@@ -3,7 +3,6 @@ const initState = {
 }
 
 const reducer = (state = initState, action) => {
-  console.log("why am i here")
   switch (action.type) {
     case 'Nodd': 
       state = {

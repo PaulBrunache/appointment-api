@@ -33,8 +33,10 @@
     "react-on-rails": "8.0.0",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
+    "redux-form": "^6.8.0",
     "redux-logger": "^3.0.6",
     "redux-promise-middleware": "^4.3.0",
+    "redux-thunk": "^2.2.0",
     "style-loader": "^0.18.2",
     "webpack": "^2.3.3",
     "webpack-manifest-plugin": "^1.1.0"
