@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios'; 
 import { connect } from 'react-redux';
 import * as userAction from '../actions/userAction';
+import * as asyncAction from '../actions/asyncActions';
 import ReactDOM from 'react-dom'
 import { bindActionCreators } from 'redux';
 import ControlPanel from '../containers/controlPanel'
@@ -12,7 +13,9 @@ import appointmentTable from '../components/appointmentTable';
 const mapDispatchToProps = (dispatch) => {
     return  bindActionCreators({ 
         resetQuery: userAction.AppointmentResetQuery,
-        sendQuery: userAction.AppointmentQuery
+        sendQuery: userAction.AppointmentQuery,
+        asyncAction.createAppointment
+        asyncAction.getAllAppointments
 
     }, dispatch);
 }

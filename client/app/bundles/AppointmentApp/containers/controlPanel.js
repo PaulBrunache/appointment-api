@@ -7,7 +7,6 @@ import * as userAction from '../actions/userAction';
 import appointmentTable from '../components/appointmentTable';
 import { TimePicker, DatePicker } from 'antd';
 import moment from 'moment';
-import axios from 'axios'; 
 
 class ShowCreateForm extends Component{
     constructor(props) {
